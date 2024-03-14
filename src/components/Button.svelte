@@ -1,9 +1,9 @@
 <script lang="ts">
-    export let text = '';
-    export let triple = false;
-    export let double = false;
-    export let operation = false;
-    export let highlight = false;
+    export let text: string = '';
+    export let triple: boolean = false;
+    export let double: boolean = false;
+    export let operation: boolean = false;
+    export let highlight: boolean = false;
 </script>
 
 <!-- <button class={`button ${triple ? 'triple' : ''}`}>{text}</button> -->

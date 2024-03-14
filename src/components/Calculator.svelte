@@ -1,12 +1,14 @@
 <script>
+	import Display from './Display.svelte';
 	import Row from './Row.svelte';
     import Button from "./Button.svelte";
 </script>
 
 <div class="calculator">
+    <Display value="123" />
     <Row>
         <Button text = "AC" triple highlight/>
-        <Button text = "/"/>
+        <Button text = "/" operation/>
     </Row>
     <Row>
         <Button text = "7"/>
