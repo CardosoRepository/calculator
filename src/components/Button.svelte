@@ -15,6 +15,8 @@
         margin: 0;
         border: 1px solid var(--background-color);
         flex-basis: 25%;
+        height: 60px;
+        font-size: large;
     }
 
     .triple {

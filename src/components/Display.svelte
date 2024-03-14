@@ -18,21 +18,18 @@
         padding: 0px 5px;
         border: 1px solid var(--background-color);
         overflow: hidden;
-        font-size: 1.7rem;
+        font-size: 2.5rem;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
     }
 
-    .s-11 { font-size: 1.5rem; }
-    .s-12 { font-size: 1.4rem; }
-    .s-13 { font-size: 1.3rem; }
-    .s-14 { font-size: 1.25rem; }
-    .s-15 { font-size: 1.15rem; }
-    .s-16 { font-size: 1.05rem; }
-    .s-17 { font-size: 1.00rem; }
-    .s-18 { font-size: 0.95rem; }
-    .s-19 { font-size: 0.90rem; }
-    .s-20 { font-size: 0.85rem; }
+    .s-14 { font-size: 2.40rem; }
+    .s-15 { font-size: 2.30rem; }
+    .s-16 { font-size: 2.20rem; }
+    .s-17 { font-size: 2.05rem; }
+    .s-18 { font-size: 1.95rem; }
+    .s-19 { font-size: 1.85rem; }
+    .s-20 { font-size: 1.75rem; }
 
-    .small { font-size: 0.65rem; }
+    .small { font-size: 1.60rem; }
 </style>
