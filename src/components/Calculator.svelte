@@ -5,7 +5,7 @@
 </script>
 
 <div class="calculator">
-    <Display value="123" />
+    <Display value="1234567890" />
     <Row>
         <Button text = "AC" triple highlight/>
         <Button text = "/" operation/>
