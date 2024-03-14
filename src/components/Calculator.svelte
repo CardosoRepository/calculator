@@ -2,55 +2,46 @@
     import Display from "./Display.svelte";
     import Row from "./Row.svelte";
     import Button from "./Button.svelte";
+    import CalculatorModel from "../model/CalculatorModel";
 
-    class Model {
-        value: string;
+    let calc = new CalculatorModel();
 
-        constructor(value: string = '0') {
-            this.value = value;
-        }
-
-        inc() {
-            return new Model(`${parseInt(this.value) + 1}`);
-        }
-    }
-
-    let obj = new Model()
-
-    function typedNumber(number: string) {
-        // obj.value += number;
-        obj = obj.inc();
-    }
+    const typedNumberChanges = (num: string) => (calc = calc.typedNumber(num));
+    const typedDotChanges = () => (calc = calc.typedDot());
+    const typedOperationChanges = (op: string) =>
+        (calc = calc.typedOperation(op));
+    const calculate = () => (calc = calc.calculate());
+    const clearDisplay = () => (calc = calc.clearDisplay());
 </script>
 
 <div class="calculator">
-    <Display value={obj.value} />
+    <Display value={calc.value} />
     <Row>
-        <Button text="AC" triple highlight />
-        <Button text="/" operation />
+        <Button text="AC" triple highlight onClick={clearDisplay} />
+        <Button text="/" operation onClick={typedOperationChanges} />
     </Row>
     <Row>
-        <Button text="7" onClick={typedNumber} />
-        <Button text="8" onClick={typedNumber} />
-        <Button text="9" onClick={typedNumber} />
-        <Button text="*" operation />
+        <Button text="7" onClick={typedNumberChanges} />
+        <Button text="8" onClick={typedNumberChanges} />
+        <Button text="9" onClick={typedNumberChanges} />
+        <Button text="*" operation onClick={typedOperationChanges} />
     </Row>
     <Row>
-        <Button text="4" />
-        <Button text="5" />
-        <Button text="6" />
-        <Button text="+" operation />
+        <Button text="4" onClick={typedNumberChanges} />
+        <Button text="5" onClick={typedNumberChanges} />
+        <Button text="6" onClick={typedNumberChanges} />
+        <Button text="+" operation onClick={typedOperationChanges} />
     </Row>
     <Row>
-        <Button text="1" />
-        <Button text="2" />
-        <Button text="3" />
-        <Button text="-" operation />
+        <Button text="1" onClick={typedNumberChanges} />
+        <Button text="2" onClick={typedNumberChanges} />
+        <Button text="3" onClick={typedNumberChanges} />
+        <Button text="-" operation onClick={typedOperationChanges} />
     </Row>
     <Row>
-        <Button double text="0" />
-        <Button text="," />
-        <Button text="=" highlight />
+        <Button text="0" onClick={typedNumberChanges} double />
+        <Button text="," onClick={typedDotChanges} />
+        <Button text="=" highlight onClick={calculate}/>
     </Row>
 </div>
 
